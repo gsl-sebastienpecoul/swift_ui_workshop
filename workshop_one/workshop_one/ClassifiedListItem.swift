@@ -1,45 +1,91 @@
 import SwiftUI
 
 struct ClassifiedListItem: View {
+    
+    @Binding var classified: Classified
+    
     var body: some View {
         VStack(alignment: .leading, spacing: 12.0) {
-            ZStack(alignment: .topTrailing) {
-                Color.black
-                AsyncImage(url: URL(string: "https://storage.gra.cloud.ovh.net/v1/AUTH_e0b83750570d4ff1986fe199b41300e4/kimono/1eff1624766e2f063732ed9951512842b9cf9aba/600x370-fit-cover-orientation-0deg?width=600&height=370&fit=cover")!) {
-                    $0.image?
-                        .resizable()
-                        .scaledToFit()
-                }
-                Text("Nouveauté")
-                    .font(.caption)
-                    .padding(8.0)
-                    .background(Color.white)
-                    .cornerRadius(4.0)
-                    .padding(16.0)
-            }
-            .frame(height: 200)
+            
+            ImageView(url: classified.thumnbailPaths[0])
+                .overlay {
+                        VStack(alignment: .trailing) {
+                            if classified.isNovelty ?? false {
+                                Text("Nouveauté")
+                                    .font(.caption)
+                                    .padding(8.0)
+                                    .background(Color.white)
+                                    .cornerRadius(DesignSystem.CornerRadius.small.rawValue)
+                            } else {
+                                EmptyView()
+                            }
+                            
+                            Spacer()
+                            FavoriteButton(binding: Binding<Bool>(get: { classified.isFavorite }, set: { classified.isFavorite = $0}))
+                        }
+                        .padding(16)
+                        .frame(maxWidth: .infinity, alignment: .trailing)
+                    }
             .frame(maxWidth: .infinity)
-            .cornerRadius(8.0)
+            .cornerRadius(DesignSystem.CornerRadius.medium.rawValue)
+            .shadow(color: .black, radius: 4.0)
             
             VStack(alignment: .leading) {
-                Text("3 500€")
-                    .font(.body)
-                    .bold()
+                Text(classified.price)
+                    .font(DesignSystem.Font.h1.font)
                 Text("Appartement")
-                    .font(.body)
-                Text("77 m2 • 2 pièces • 1 chambre")
-                    .font(.body)
-                Text("Paris 16 ème")
-                    .font(.caption)
+                    .font(DesignSystem.Font.body.font)
+                Text(classified.mainInformation)
+                    .font(DesignSystem.Font.body.font)
+                Text(classified.place)
+                    .font(DesignSystem.Font.caption.font)
             }
         }
-        .padding()
         .frame(maxWidth: .infinity)
     }
 }
 
 struct ClassifiedListItem_Previews: PreviewProvider {
     static var previews: some View {
-        ClassifiedListItem()
+        ClassifiedListItem(classified: .constant(Classified.mocks[0]))
+    }
+}
+
+struct ImageView: View {
+    
+    let url: String
+    
+    var body: some View {
+        AsyncImage(url: URL(string: url)!) {
+            $0.image?
+                .resizable()
+                .scaledToFill()
+                .frame(height: 200)
+        }
+    }
+}
+
+
+struct FavoriteButton: View {
+    
+    
+    init(binding: Binding<Bool>) {
+        self._isFavorite = binding
+    }
+    
+    @Binding var isFavorite: Bool
+    
+    var body: some View {
+        ZStack {
+            Circle()
+                .fill(.white.shadow(.drop(color: .black, radius: 4.0)))
+                .frame(width: 44, height: 44)
+            Button {
+                isFavorite.toggle()
+            } label: {
+                Image(systemName: isFavorite ? "heart" : "heart.fill")
+            }
+            .accentColor(Color.red)
+        }
     }
 }
