@@ -6,8 +6,8 @@ struct ClassifiedListItem: View {
     
     var body: some View {
         VStack(alignment: .leading, spacing: 12.0) {
-            
             ImageView(url: classified.thumnbailPaths[0])
+                .frame(height: 200)
                 .overlay {
                         VStack(alignment: .trailing) {
                             if classified.isNovelty ?? false {
@@ -16,20 +16,15 @@ struct ClassifiedListItem: View {
                                     .padding(8.0)
                                     .background(Color.white)
                                     .cornerRadius(DesignSystem.CornerRadius.small.rawValue)
-                            } else {
-                                EmptyView()
                             }
                             
                             Spacer()
-                            FavoriteButton(binding: Binding<Bool>(get: { classified.isFavorite }, set: { classified.isFavorite = $0}))
+                            FavoriteButton(binding: $classified.isFavorite)
                         }
                         .padding(16)
                         .frame(maxWidth: .infinity, alignment: .trailing)
                     }
-            .frame(maxWidth: .infinity)
             .cornerRadius(DesignSystem.CornerRadius.medium.rawValue)
-            .shadow(color: .black, radius: 4.0)
-            
             VStack(alignment: .leading) {
                 Text(classified.price)
                     .font(DesignSystem.Font.h1.font)
@@ -41,7 +36,6 @@ struct ClassifiedListItem: View {
                     .font(DesignSystem.Font.caption.font)
             }
         }
-        .frame(maxWidth: .infinity)
     }
 }
 
@@ -56,11 +50,12 @@ struct ImageView: View {
     let url: String
     
     var body: some View {
-        AsyncImage(url: URL(string: url)!) {
-            $0.image?
+        AsyncImage(url: URL(string: url)!) { image in
+            image
                 .resizable()
                 .scaledToFill()
-                .frame(height: 200)
+        }  placeholder: {
+            Color.gray
         }
     }
 }

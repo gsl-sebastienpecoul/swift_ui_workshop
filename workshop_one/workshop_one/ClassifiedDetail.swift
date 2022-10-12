@@ -17,7 +17,7 @@ struct ClassifiedDetail: View {
                     .font(.title2)
                     .bold()
                 Text(classified.description)
-                    .lineLimit(1)
+                    .lineLimit(2)
                 Button("See more") {
                     isSheetPresented.toggle()
                 }

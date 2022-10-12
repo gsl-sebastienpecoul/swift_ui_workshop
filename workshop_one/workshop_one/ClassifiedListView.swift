@@ -4,20 +4,17 @@ struct ClassifiedListView: View {
     
     let gridItem = GridItem(.adaptive(minimum: 300), spacing: 8.0, alignment: .leading)
     
-    let xyz = GridItem(.flexible())
-    
     @State var classifieds = Classified.mocks
     
     var body: some View {
         NavigationView {
             ScrollView {
                 LazyVGrid(columns: [gridItem]) {
-                    
                     ForEach($classifieds) { $classified in
                         NavigationLink {
                             ClassifiedDetail(classified: $classified)
                         } label: {
-                            ClassifiedListItem(classified: $classified)
+                            ClassifiedListItem(classified: $classified)    
                         }.buttonStyle(PlainButtonStyle())
                         
                         Divider()
