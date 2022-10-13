@@ -20,16 +20,16 @@ enum DesignSystem {
             
             switch self {
             case .h1:
-                let uiFont = UIFontMetrics(forTextStyle: .title1).scaledFont(for: UIFont(name: "SourceSansPro-Regular", size: 20)!)
+                let uiFont = UIFontMetrics(forTextStyle: .title1).scaledFont(for: UIFont(name: "SourceSansPro-Regular", size: 22)!)
                 return SwiftUI.Font(uiFont)
             case .h2:
-                let uiFont = UIFontMetrics(forTextStyle: .title2).scaledFont(for: UIFont(name: "SourceSansPro-Bold", size: 16)!)
+                let uiFont = UIFontMetrics(forTextStyle: .title2).scaledFont(for: UIFont(name: "SourceSansPro-Bold", size: 18)!)
                 return SwiftUI.Font(uiFont)
             case .body:
-                let uiFont = UIFontMetrics(forTextStyle: .body).scaledFont(for: UIFont(name: "SourceSansPro-Regular", size: 12)!)
+                let uiFont = UIFontMetrics(forTextStyle: .body).scaledFont(for: UIFont(name: "SourceSansPro-Regular", size: 14)!)
                 return SwiftUI.Font(uiFont)
             case .caption:
-                let uiFont = UIFontMetrics(forTextStyle: .footnote).scaledFont(for: UIFont(name: "SourceSansPro-Bold", size: 10)!)
+                let uiFont = UIFontMetrics(forTextStyle: .footnote).scaledFont(for: UIFont(name: "SourceSansPro-Bold", size: 12)!)
                 return SwiftUI.Font(uiFont)
             }
         }

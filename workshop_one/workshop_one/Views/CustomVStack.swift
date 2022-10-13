@@ -2,7 +2,6 @@ import Foundation
 import SwiftUI
 
 struct CustomVStack<Content: View>: View {
-    
     let content: Content
 
     init(@ViewBuilder content: @escaping () -> Content) {
@@ -14,5 +13,7 @@ struct CustomVStack<Content: View>: View {
             content
         }
         .frame(maxHeight: .infinity, alignment: .top)
+        .font(DesignSystem.Font.body.font)
+        .padding()
     }
 }

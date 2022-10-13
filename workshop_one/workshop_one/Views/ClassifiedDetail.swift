@@ -2,26 +2,26 @@ import SwiftUI
 
 struct ClassifiedDetail: View {
     
-    @State private var isSheetPresented = false
     @State private var isAlertPresented = false
-    
+    @State private var isSheetPresented = false
+
     @Binding var classified: Classified
     
     var body: some View {
         CustomVStack {
             ClassifiedListItem(classified: $classified)
-            Divider()
                 .padding()
+            Divider()
+                .padding(.horizontal)
             VStack(alignment: .leading, spacing: 8.0) {
                 Text("Description")
                     .font(.title2)
                     .bold()
                 Text(classified.description)
-                    .lineLimit(2)
+                    .lineLimit(5)
                 Button("See more") {
                     isSheetPresented.toggle()
                 }
-                
                 Spacer()
                 Button {
                     isAlertPresented.toggle()
@@ -31,6 +31,7 @@ struct ClassifiedDetail: View {
                 .buttonStyle(.main)
                 .frame(maxWidth: .infinity)
             }
+            .font(DesignSystem.Font.body.font)
             .alert("Call owner at: XXX-XX-XX", isPresented: $isAlertPresented) {
                 Button("Ok", role: .cancel) {}
             }
@@ -41,7 +42,6 @@ struct ClassifiedDetail: View {
                         .bold()
                     Text(classified.description)
                 }
-                .padding()
             })
             .padding()
         }
