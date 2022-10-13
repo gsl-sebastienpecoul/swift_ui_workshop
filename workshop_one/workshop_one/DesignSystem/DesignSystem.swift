@@ -22,16 +22,16 @@ enum DesignSystem {
             switch self {
             case .h1:
                 size = 22
-                name = "SourceSansPro-Regular"
+                name = "SourceSansPro-Bold"
             case .h2:
                 size = 18
-                name = "SourceSansPro-Bold"
+                name = "SourceSansPro-SemiBold"
             case .body:
                 size = 14
                 name = "SourceSansPro-Regular"
             case .caption:
                 size = 12
-                name = "SourceSansPro-Bold"
+                name = "SourceSansPro-SemiBold"
             }
             let scaledSize = UIFontMetrics.default.scaledValue(for: size)
             return SwiftUI.Font.custom(name, size: scaledSize)

@@ -5,7 +5,7 @@ struct ClassifiedListItem: View {
     @Binding var classified: Classified
     
     var body: some View {
-        VStack(alignment: .leading, spacing: 12.0) {
+        VStack(alignment: .leading, spacing: 0) {
             ImageView(url: classified.thumnbailPaths[0])
                 .frame(height: 200)
                 .overlay(alignment: .topTrailing) {
@@ -17,10 +17,11 @@ struct ClassifiedListItem: View {
                     ClassifiedLabel(color: .black, text: "3D Visit")
                 }
                 .cornerRadius(DesignSystem.CornerRadius.medium.rawValue)
-                .padding(.bottom, -34)
+                .padding(.bottom, -22)
             FavoriteButton(isFavorite: $classified.isFavorite)
                 .frame(maxWidth: .infinity, alignment: .trailing)
                 .padding(.horizontal)
+                .padding(.bottom, -4)
             footer
         }
         .font(DesignSystem.Font.body.font)
@@ -46,7 +47,7 @@ struct ClassifiedLabel: View {
         Text(text)
             .foregroundColor(color != .white ? .white : .black)
             .font(.caption)
-            .padding(8.0)
+            .padding(4.0)
             .background(color)
             .cornerRadius(DesignSystem.CornerRadius.small.rawValue)
             .padding(8.0)

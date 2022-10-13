@@ -26,7 +26,7 @@ struct ClassifiedListView: View {
                             }
                             .buttonStyle(PlainButtonStyle())
                             Divider()
-                                .padding(.bottom)
+                                .padding(.vertical)
                         }
                         .task {
                             if classified.id == classifieds.last?.id {
