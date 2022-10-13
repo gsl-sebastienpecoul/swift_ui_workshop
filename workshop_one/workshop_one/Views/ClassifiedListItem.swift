@@ -14,7 +14,7 @@ struct ClassifiedListItem: View {
                     }
                 }
                 .overlay(alignment: .bottomLeading) {
-                    ClassifiedLabel(color: .black, text: "Visite 3D")
+                    ClassifiedLabel(color: .black, text: "3D Visit")
                 }
                 .cornerRadius(DesignSystem.CornerRadius.medium.rawValue)
                 .padding(.bottom, -34)

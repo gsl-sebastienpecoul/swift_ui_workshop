@@ -4,13 +4,17 @@ struct ClassifiedListView: View {
     
     let gridItem = GridItem(.adaptive(minimum: 300), spacing: 8.0, alignment: .leading)
     
-    @State var classifieds = Classified.mocks
-    
+    @State private var classifieds: [Classified] = []
+    let service = ClassifiedService()
+
     var body: some View {
         NavigationView {
+            
             ScrollView {
+                if classifieds.isEmpty {
+                    ProgressView()
+                }
                 LazyVGrid(columns: [gridItem]) {
-                    
                     ForEach($classifieds) { $classified in
                         VStack(spacing: 0) {
                             NavigationLink {
@@ -29,6 +33,9 @@ struct ClassifiedListView: View {
                 .padding(16)
             }
             .navigationTitle("Listings")
+        }
+        .task {
+            classifieds = await service.fetchClassifieds(in: 0.5)
         }
     }
 }

@@ -25,6 +25,7 @@
 		1ADB4AF628F7E3CA00F73E57 /* MainActionButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ADB4AF528F7E3CA00F73E57 /* MainActionButtonStyle.swift */; };
 		1ADB4AF828F7E43D00F73E57 /* FavoriteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ADB4AF728F7E43D00F73E57 /* FavoriteButton.swift */; };
 		1ADB4AFA28F7E47600F73E57 /* ImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ADB4AF928F7E47600F73E57 /* ImageView.swift */; };
+		1ADB4AFC28F80A5400F73E57 /* ClassifiedService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ADB4AFB28F80A5400F73E57 /* ClassifiedService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +49,7 @@
 		1ADB4AF528F7E3CA00F73E57 /* MainActionButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainActionButtonStyle.swift; sourceTree = "<group>"; };
 		1ADB4AF728F7E43D00F73E57 /* FavoriteButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteButton.swift; sourceTree = "<group>"; };
 		1ADB4AF928F7E47600F73E57 /* ImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageView.swift; sourceTree = "<group>"; };
+		1ADB4AFB28F80A5400F73E57 /* ClassifiedService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassifiedService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +67,7 @@
 			isa = PBXGroup;
 			children = (
 				025B206928EF239C0012311A /* Classified.swift */,
+				1ADB4AFB28F80A5400F73E57 /* ClassifiedService.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -226,6 +229,7 @@
 				1ADB4AF828F7E43D00F73E57 /* FavoriteButton.swift in Sources */,
 				02E31EF328E4932F00C652F6 /* ClassifiedListItem.swift in Sources */,
 				025B206C28EF25D00012311A /* DesignSystem.swift in Sources */,
+				1ADB4AFC28F80A5400F73E57 /* ClassifiedService.swift in Sources */,
 				02E31EF528E498D800C652F6 /* ClassifiedDetail.swift in Sources */,
 				1ADB4AF628F7E3CA00F73E57 /* MainActionButtonStyle.swift in Sources */,
 				02E31EE328E48C5200C652F6 /* workshop_oneApp.swift in Sources */,
