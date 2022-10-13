@@ -16,7 +16,7 @@ struct ClassifiedListItem: View {
                 .overlay(alignment: .bottomLeading) {
                     ClassifiedLabel(color: .black, text: "3D Visit")
                 }
-                .cornerRadius(DesignSystem.CornerRadius.medium.rawValue)
+                .cornerRadius(.medium)
                 .padding(.bottom, -22)
             FavoriteButton(isFavorite: $classified.isFavorite)
                 .frame(maxWidth: .infinity, alignment: .trailing)
@@ -24,17 +24,17 @@ struct ClassifiedListItem: View {
                 .padding(.bottom, -4)
             footer
         }
-        .font(DesignSystem.Font.body.font)
+        .font(.dsBody)
     }
     
     var footer: some View {
         VStack(alignment: .leading) {
             Text(classified.price)
-                .font(DesignSystem.Font.h1.font)
+                .font(.dsH1)
             Text("Apartment")
             Text(classified.mainInformation)
             Text(classified.place)
-                .font(DesignSystem.Font.caption.font)
+                .font(.dsCaption)
         }
     }
 }
@@ -46,11 +46,11 @@ struct ClassifiedLabel: View {
     var body: some View {
         Text(text)
             .foregroundColor(color != .white ? .white : .black)
-            .font(.caption)
-            .padding(4.0)
+            .font(.dsCaption)
+            .padding(.extrasmall)
             .background(color)
-            .cornerRadius(DesignSystem.CornerRadius.small.rawValue)
-            .padding(8.0)
+            .cornerRadius(.small)
+            .padding(.medium)
     }
 }
 

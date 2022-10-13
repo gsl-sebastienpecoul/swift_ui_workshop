@@ -35,7 +35,7 @@ struct ClassifiedListView: View {
                         }
                     }
                 }
-                .padding(16)
+                .padding(.extralarge)
             }
             .navigationTitle("Listings")
         }

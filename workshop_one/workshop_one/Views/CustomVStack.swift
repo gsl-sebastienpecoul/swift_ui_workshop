@@ -12,6 +12,6 @@ struct CustomVStack<Content: View>: View {
             content
         }
         .frame(maxHeight: .infinity, alignment: .top)
-        .font(DesignSystem.Font.body.font)
+        .font(.dsBody)
     }
 }

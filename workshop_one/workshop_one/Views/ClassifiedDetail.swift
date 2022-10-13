@@ -13,7 +13,7 @@ struct ClassifiedDetail: View {
             Divider()
             VStack(alignment: .leading, spacing: 8.0) {
                 Text("Description")
-                    .font(DesignSystem.Font.h1.font)
+                    .font(.dsH1)
                 Text(classified.description)
                     .lineLimit(5)
                 Button("See more") {
@@ -28,16 +28,16 @@ struct ClassifiedDetail: View {
                 .buttonStyle(.main)
                 .frame(maxWidth: .infinity)
             }
-            .font(DesignSystem.Font.body.font)
+            .font(.dsBody)
             .alert("Call owner at: XXX-XX-XX", isPresented: $isAlertPresented) {
                 Button("Ok", role: .cancel) {}
             }
             .sheet(isPresented: $isSheetPresented, content: {
                 CustomVStack {
                     Text("Description")
-                        .font(DesignSystem.Font.h1.font)
+                        .font(.dsH1)
                     Text(classified.description)
-                        .font(DesignSystem.Font.body.font)
+                        .font(.dsBody)
                 }
                 .padding()
             })

@@ -10,26 +10,34 @@ enum DesignSystem {
         case large = 16
     }
     
+    enum Padding: Double {
+        case extrasmall = 4
+        case small = 6
+        case medium = 8
+        case large = 10
+        case extralarge = 16
+    }
+    
     enum Font {
-        case h1 
-        case h2
-        case body
-        case caption
+        case dsH1
+        case dsH2
+        case dsBody
+        case dsCaption
         
         var font: SwiftUI.Font {
             let size: CGFloat
             let name: String
             switch self {
-            case .h1:
+            case .dsH1:
                 size = 22
                 name = "SourceSansPro-Bold"
-            case .h2:
+            case .dsH2:
                 size = 18
                 name = "SourceSansPro-SemiBold"
-            case .body:
+            case .dsBody:
                 size = 14
                 name = "SourceSansPro-Regular"
-            case .caption:
+            case .dsCaption:
                 size = 12
                 name = "SourceSansPro-SemiBold"
             }
@@ -82,5 +90,19 @@ extension Color {
             blue:  Double(b) / 255,
             opacity: Double(a) / 255
         )
+    }
+}
+
+extension View {
+    func padding(_ padding: DesignSystem.Padding) -> some View {
+        self.padding(padding.rawValue)
+    }
+    
+    func cornerRadius(_ radius: DesignSystem.CornerRadius) -> some View {
+        self.cornerRadius(radius.rawValue)
+    }
+    
+    func font(_ dsFont: DesignSystem.Font) -> some View {
+        self.font(dsFont.font)
     }
 }
