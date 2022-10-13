@@ -13,8 +13,7 @@ struct Classified: Identifiable {
 }
 
 extension Classified {
-    static var mocks: [Classified] {
-        return [
+    static var mocks: [Classified] = [
             Classified(
                 description: """
                     Start your new life in Paris in style with this refined 3 room apartment offered by Blueground. You'll feel right at home in this fully furnished, upscale apartment located in Champs Elysees.  With Blueground, benefit from a 24/7 customer service to assist you! An apartment designed especially for you
@@ -137,7 +136,6 @@ We are pleased to announce the launch of our new MAISON LEONTINE program. In Mon
             thumnbailPaths: ["https://v.seloger.com/s/width/1092/visuels/1/h/q/8/1hq8d9lnf30dxf3m86s7ohxb9ftlm6lilg5oun4ka.jpg"]
         )
     ]
-    }
     
 }
 

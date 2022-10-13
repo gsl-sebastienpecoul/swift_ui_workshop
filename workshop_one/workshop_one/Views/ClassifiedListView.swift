@@ -28,6 +28,11 @@ struct ClassifiedListView: View {
                             Divider()
                                 .padding(.bottom)
                         }
+                        .task {
+                            if classified.id == classifieds.last?.id {
+                                await addNotAlreadyPresentsClassifieds()
+                            }
+                        }
                     }
                 }
                 .padding(16)
@@ -36,6 +41,13 @@ struct ClassifiedListView: View {
         }
         .task {
             classifieds = await service.fetchClassifieds(in: 0.5)
+        }
+    }
+    
+    func addNotAlreadyPresentsClassifieds() async {
+        let newClassifieds = await service.fetchClassifieds(in: 0.5)
+        classifieds += newClassifieds.filter { classified in
+            !classifieds.contains { $0.id == classified.id }
         }
     }
 }
