@@ -10,13 +10,10 @@ struct ClassifiedDetail: View {
     var body: some View {
         CustomVStack {
             ClassifiedListItem(classified: $classified)
-                .padding()
             Divider()
-                .padding(.horizontal)
             VStack(alignment: .leading, spacing: 8.0) {
                 Text("Description")
-                    .font(.title2)
-                    .bold()
+                    .font(DesignSystem.Font.h1.font)
                 Text(classified.description)
                     .lineLimit(5)
                 Button("See more") {
@@ -38,18 +35,21 @@ struct ClassifiedDetail: View {
             .sheet(isPresented: $isSheetPresented, content: {
                 CustomVStack {
                     Text("Description")
-                        .font(.title)
-                        .bold()
+                        .font(DesignSystem.Font.h1.font)
                     Text(classified.description)
+                        .font(DesignSystem.Font.body.font)
                 }
+                .padding()
             })
-            .padding()
         }
+        .padding()
     }
 }
 
 struct ClassifiedDetail_Previews: PreviewProvider {
     static var previews: some View {
         ClassifiedDetail(classified: .constant(Classified.mocks[0]))
+        ClassifiedDetail(classified: .constant(Classified.mocks[2]))
+            .previewDevice(PreviewDevice(rawValue: "iPad Pro (9.7-inch)"))
     }
 }

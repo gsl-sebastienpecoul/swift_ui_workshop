@@ -1,4 +1,3 @@
-import Foundation
 import SwiftUI
 
 struct CustomVStack<Content: View>: View {
@@ -9,11 +8,10 @@ struct CustomVStack<Content: View>: View {
     }
     
     var body: some View {
-        VStack(alignment: .leading, spacing: 8.0) {
+        VStack(alignment: .leading, spacing: 14.0) {
             content
         }
         .frame(maxHeight: .infinity, alignment: .top)
         .font(DesignSystem.Font.body.font)
-        .padding()
     }
 }

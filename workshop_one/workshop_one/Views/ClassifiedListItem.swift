@@ -7,35 +7,49 @@ struct ClassifiedListItem: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 12.0) {
             ImageView(url: classified.thumnbailPaths[0])
-                .overlay {
-                    VStack(alignment: .trailing) {
-                        if classified.isNovelty ?? false {
-                            Text("Nouveauté")
-                                .font(.caption)
-                                .padding(8.0)
-                                .background(Color.white)
-                                .cornerRadius(DesignSystem.CornerRadius.small.rawValue)
-                        }
-                        
-                        Spacer()
-                        FavoriteButton(isFavorite: $classified.isFavorite)
+                .frame(height: 200)
+                .overlay(alignment: .topTrailing) {
+                    if classified.isNovelty ?? false {
+                        ClassifiedLabel(color: .white, text: "New")
                     }
-                    .padding(16)
-                    .frame(maxWidth: .infinity, alignment: .trailing)
                 }
-                .frame(height: 250)
+                .overlay(alignment: .bottomLeading) {
+                    ClassifiedLabel(color: .black, text: "Visite 3D")
+                }
                 .cornerRadius(DesignSystem.CornerRadius.medium.rawValue)
-            VStack(alignment: .leading) {
-                Text(classified.price)
-                    .font(DesignSystem.Font.h1.font)
-                Text("Appartement")
-                    .font(DesignSystem.Font.body.font)
-                Text(classified.mainInformation)
-                    .font(DesignSystem.Font.body.font)
-                Text(classified.place)
-                    .font(DesignSystem.Font.caption.font)
-            }
+                .padding(.bottom, -34)
+            FavoriteButton(isFavorite: $classified.isFavorite)
+                .frame(maxWidth: .infinity, alignment: .trailing)
+                .padding(.horizontal)
+            footer
         }
+        .font(DesignSystem.Font.body.font)
+    }
+    
+    var footer: some View {
+        VStack(alignment: .leading) {
+            Text(classified.price)
+                .font(DesignSystem.Font.h1.font)
+            Text("Apartment")
+            Text(classified.mainInformation)
+            Text(classified.place)
+                .font(DesignSystem.Font.caption.font)
+        }
+    }
+}
+
+struct ClassifiedLabel: View {
+    let color: Color
+    let text: String
+    
+    var body: some View {
+        Text(text)
+            .foregroundColor(color != .white ? .white : .black)
+            .font(.caption)
+            .padding(8.0)
+            .background(color)
+            .cornerRadius(DesignSystem.CornerRadius.small.rawValue)
+            .padding(8.0)
     }
 }
 

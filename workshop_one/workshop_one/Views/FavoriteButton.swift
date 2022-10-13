@@ -16,6 +16,8 @@ struct FavoriteButton: View {
             }
             .accentColor(Color.red)
         }
+        .dynamicTypeSize(...DynamicTypeSize.accessibility1)
+        .font(.title3)
     }
 }
 
