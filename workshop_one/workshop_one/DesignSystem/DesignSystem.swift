@@ -17,21 +17,24 @@ enum DesignSystem {
         case caption
         
         var font: SwiftUI.Font {
-            
+            let size: CGFloat
+            let name: String
             switch self {
             case .h1:
-                let uiFont = UIFontMetrics(forTextStyle: .title1).scaledFont(for: UIFont(name: "SourceSansPro-Regular", size: 22)!)
-                return SwiftUI.Font(uiFont)
+                size = 22
+                name = "SourceSansPro-Regular"
             case .h2:
-                let uiFont = UIFontMetrics(forTextStyle: .title2).scaledFont(for: UIFont(name: "SourceSansPro-Bold", size: 18)!)
-                return SwiftUI.Font(uiFont)
+                size = 18
+                name = "SourceSansPro-Bold"
             case .body:
-                let uiFont = UIFontMetrics(forTextStyle: .body).scaledFont(for: UIFont(name: "SourceSansPro-Regular", size: 14)!)
-                return SwiftUI.Font(uiFont)
+                size = 14
+                name = "SourceSansPro-Regular"
             case .caption:
-                let uiFont = UIFontMetrics(forTextStyle: .footnote).scaledFont(for: UIFont(name: "SourceSansPro-Bold", size: 12)!)
-                return SwiftUI.Font(uiFont)
+                size = 12
+                name = "SourceSansPro-Bold"
             }
+            let scaledSize = UIFontMetrics.default.scaledValue(for: size)
+            return SwiftUI.Font.custom(name, size: scaledSize)
         }
     
     }
