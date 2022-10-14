@@ -92,17 +92,3 @@ extension Color {
         )
     }
 }
-
-extension View {
-    func padding(_ padding: DesignSystem.Padding) -> some View {
-        self.padding(padding.rawValue)
-    }
-    
-    func cornerRadius(_ radius: DesignSystem.CornerRadius) -> some View {
-        self.cornerRadius(radius.rawValue)
-    }
-    
-    func font(_ dsFont: DesignSystem.Font) -> some View {
-        self.font(dsFont.font)
-    }
-}

@@ -4,7 +4,7 @@ import SwiftUI
 struct workshop_oneApp: App {
     var body: some Scene {
         WindowGroup {
-           ClassifiedListView()
+           Text("Hello")
         }
     }
 }
