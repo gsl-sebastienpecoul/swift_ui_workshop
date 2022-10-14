@@ -4,6 +4,10 @@ struct ClassifiedListItem: View {
     
     @Binding var classified: Classified
     
+    init(classified: Binding<Classified>) {
+        self._classified = classified
+    }
+    
     var body: some View {
         VStack(alignment: .leading, spacing: 0) {
             ImageView(url: classified.thumnbailPaths[0])
@@ -36,6 +40,7 @@ struct ClassifiedListItem: View {
             Text(classified.place)
                 .font(.dsCaption)
         }
+        .accessibilityElement(children: .combine)
     }
 }
 
@@ -56,6 +61,6 @@ struct ClassifiedLabel: View {
 
 struct ClassifiedListItem_Previews: PreviewProvider {
     static var previews: some View {
-        ClassifiedListItem(classified: .constant(Classified.mocks[0]))
+        ClassifiedListItem(classified: .constant(Classified.mocks[4]))
     }
 }
