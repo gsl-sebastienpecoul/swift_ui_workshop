@@ -2,7 +2,7 @@ import SwiftUI
 
 struct ClassifiedListItem: View {
     
-    @Binding var classified: Classified
+    let classified: Classified
     
     var body: some View {
         VStack(alignment: .leading, spacing: 0) {
@@ -17,11 +17,6 @@ struct ClassifiedListItem: View {
                     ClassifiedLabel(color: .black, text: "3D Visit")
                 }
                 .cornerRadius(.medium)
-                .padding(.bottom, -22)
-            FavoriteButton(isFavorite: $classified.isFavorite)
-                .frame(maxWidth: .infinity, alignment: .trailing)
-                .padding(.horizontal)
-                .padding(.bottom, -4)
             footer
         }
         .font(.dsBody)
@@ -56,6 +51,6 @@ struct ClassifiedLabel: View {
 
 struct ClassifiedListItem_Previews: PreviewProvider {
     static var previews: some View {
-        ClassifiedListItem(classified: .constant(Classified.mocks[0]))
+        ClassifiedListItem(classified: Classified.mocks[0])
     }
 }

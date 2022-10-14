@@ -4,7 +4,7 @@ import SwiftUI
 struct workshop_oneApp: App {
     var body: some Scene {
         WindowGroup {
-           ClassifiedListView()
+            ClassifiedListItem(classified: Classified.mocks[0])
         }
     }
 }
