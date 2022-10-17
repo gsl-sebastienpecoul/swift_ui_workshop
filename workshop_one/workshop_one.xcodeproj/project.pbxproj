@@ -22,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		023A26CA28FDAABE00EE38B4 /* workshop-one-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "workshop-one-Info.plist"; sourceTree = SOURCE_ROOT; };
 		025B206928EF239C0012311A /* Classified.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Classified.swift; sourceTree = "<group>"; };
 		025B206B28EF25D00012311A /* DesignSystem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignSystem.swift; sourceTree = "<group>"; };
 		0276FB1A28F07C7200E8663C /* SourceSansPro-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceSansPro-Bold.ttf"; sourceTree = "<group>"; };
@@ -105,6 +106,7 @@
 		02E31EE128E48C5200C652F6 /* workshop_one */ = {
 			isa = PBXGroup;
 			children = (
+				023A26CA28FDAABE00EE38B4 /* workshop-one-Info.plist */,
 				025B206D28EF26820012311A /* Resources */,
 				025B206828EF23830012311A /* DesignSystem */,
 				025B206728EF237F0012311A /* Model */,
@@ -333,6 +335,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"workshop_one/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "workshop-one-Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -361,6 +364,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"workshop_one/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "workshop-one-Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
