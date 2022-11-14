@@ -10,6 +10,7 @@ struct Classified: Identifiable {
     let place: String
     let price: String
     let thumnbailPaths: [String]
+    let ownerPhone: String
 }
 
 extension Classified {
@@ -24,7 +25,8 @@ extension Classified {
                 mainInformation: "3 rooms • 2 bedrooms • 69 m² • Floor 3/4",
                 place: "Paris 12 ème",
                 price: "159 000€",
-                thumnbailPaths: ["https://v.seloger.com/s/cdn/x/visuels/1/7/8/z/178zh5cxxfa39z3fx29wb5dnuzqoyd96w403ivzzk.jpg"]
+                thumnbailPaths: ["https://v.seloger.com/s/cdn/x/visuels/1/7/8/z/178zh5cxxfa39z3fx29wb5dnuzqoyd96w403ivzzk.jpg"],
+                ownerPhone: "01 20 30 40 50"
             ),
             Classified(
                 description: """
@@ -36,7 +38,8 @@ extension Classified {
                 mainInformation: "1 room • 24 m² • Floor 1/2",
                 place: "Paris 20 ème",
                 price: "359 000€",
-                thumnbailPaths: ["https://v.seloger.com/s/cdn/x/visuels/0/v/l/9/0vl9w56dl2xea4au44d8yzlzuhosfzel2wfolvl94.jpg"]
+                thumnbailPaths: ["https://v.seloger.com/s/cdn/x/visuels/0/v/l/9/0vl9w56dl2xea4au44d8yzlzuhosfzel2wfolvl94.jpg"],
+                ownerPhone: "01 20 30 40 54"
             ),
             Classified(
                 description: """
@@ -48,7 +51,8 @@ PARIS 12ème - located rue Dagorno - district Daumesnil - near Nation - SHOPS an
                 mainInformation: "2 rooms • 1 bedroom • 47 m² • Floor 0/8",
                 place: "Paris 12 ème",
                 price: "759 000€",
-                thumnbailPaths: ["https://v.seloger.com/s/cdn/x/visuels/0/r/d/a/0rda42uump557qc35kx9z00gn1ghs0cnvz5d3xcrv.jpg"]
+                thumnbailPaths: ["https://v.seloger.com/s/cdn/x/visuels/0/r/d/a/0rda42uump557qc35kx9z00gn1ghs0cnvz5d3xcrv.jpg"],
+                ownerPhone: "01 20 33 40 50"
             ),
             Classified(
                 description: """
@@ -61,7 +65,8 @@ Exclusivity Paris 5th in the heart of Historic Paris Rue du Petit Pont, facing t
                 mainInformation: "2 rooms • 1 bedroom • 33 m² • Floor 3/–",
                 place: "Paris 5 ème",
                 price: "10 199 900€",
-                thumnbailPaths: ["https://v.seloger.com/s/cdn/x/visuels/1/y/a/g/1yagp6clvstv6wotx4ub81sotn1gh5wrcz1j8z4h2.jpg"]
+                thumnbailPaths: ["https://v.seloger.com/s/cdn/x/visuels/1/y/a/g/1yagp6clvstv6wotx4ub81sotn1gh5wrcz1j8z4h2.jpg"],
+                ownerPhone: "01 24 30 40 50"
             ),
             Classified(
                 description: """
@@ -73,7 +78,8 @@ In the heart of the Canal Saint-Martin district, in a coveted condominium, in a 
                 mainInformation: "1 room • 33 m² • Floor 0/2",
                 place: "Paris 10 ème",
                 price: "100 000€",
-                thumnbailPaths: ["https://v.seloger.com/s/cdn/x/visuels/2/0/v/d/20vdrf6dx5f81iyf8r8g8k8l53ngbktcgdkux6e6s.jpg"]
+                thumnbailPaths: ["https://v.seloger.com/s/cdn/x/visuels/2/0/v/d/20vdrf6dx5f81iyf8r8g8k8l53ngbktcgdkux6e6s.jpg"],
+                ownerPhone: "01 20 30 44 50"
             ),
         Classified(
             description: """
@@ -85,7 +91,8 @@ In the heart of the Canal Saint-Martin district, in a coveted condominium, in a 
             mainInformation: "5 rooms • 3 bedrooms • 169 m² • Floor 1/1",
             place: "Lyon 7e",
             price: "1 340 000 €",
-            thumnbailPaths: ["https://v.seloger.com/s/height/1080/visuels/0/v/b/7/0vb7h4lg2zm4e8vqbbprpjrijp8xn57dfz3yra9t6.jpg"]
+            thumnbailPaths: ["https://v.seloger.com/s/height/1080/visuels/0/v/b/7/0vb7h4lg2zm4e8vqbbprpjrijp8xn57dfz3yra9t6.jpg"],
+            ownerPhone: "01 20 33 40 50"
         ),
         Classified(
             description: """
@@ -97,7 +104,8 @@ LYON 03 - EXCLUSIVE 'MATHIEU FAURE IMMO' - PART DIEU EST / AVENUE FÉLIX FAURE R
             mainInformation: "6 rooms • 224 m² • Floor 1/1",
             place: "Lyon 1er",
             price: "980 000€",
-            thumnbailPaths: ["https://v.seloger.com/s/width/800/visuels/0/8/q/k/08qkonf3ryye6qp9btmvnmt7nkjhju210mofxrm8k.jpg"]
+            thumnbailPaths: ["https://v.seloger.com/s/width/800/visuels/0/8/q/k/08qkonf3ryye6qp9btmvnmt7nkjhju210mofxrm8k.jpg"],
+            ownerPhone: "05 20 30 40 50"
         ),
         Classified(
             description: """
@@ -109,7 +117,8 @@ On the 3rd floor with elevator, quiet and bright, you will discover this beautif
             mainInformation: "2 rooms • 1 bedroom • 67 m² • Floor 7/8",
             place: "Lyon 5e",
             price: "363 000€",
-            thumnbailPaths: ["https://v.seloger.com/s/width/800/visuels/0/p/7/i/0p7ipql79s1y93gsmryxu6tudr601ua6g7ebk5avp.jpg"]
+            thumnbailPaths: ["https://v.seloger.com/s/width/800/visuels/0/p/7/i/0p7ipql79s1y93gsmryxu6tudr601ua6g7ebk5avp.jpg"],
+            ownerPhone: "09 20 30 40 50"
         ),
         Classified(
             description: """
@@ -121,7 +130,8 @@ NOUVELLE RÉSIDENCE DE STANDING au coeur de MONTCHAT LYON 3ème ! Découvrez ses
             mainInformation: "3 rooms • 1 bedroom • 63 m² • Floor 3/6",
             place: "Lyon 2e",
             price: "499 900€",
-            thumnbailPaths: ["https://v.seloger.com/s/width/1146/visuels/1/7/8/0/1780wa4ke3ivfs4fprn0d0l795xioqwm1kb2zuyyn.jpg"]
+            thumnbailPaths: ["https://v.seloger.com/s/width/1146/visuels/1/7/8/0/1780wa4ke3ivfs4fprn0d0l795xioqwm1kb2zuyyn.jpg"],
+            ownerPhone: "01 20 35 40 50"
         ),
         Classified(
             description: """
@@ -133,7 +143,8 @@ We are pleased to announce the launch of our new MAISON LEONTINE program. In Mon
             mainInformation: "10 room • 133 m² • Floor 2/2",
             place: "Lyon 4e",
             price: "570 000€",
-            thumnbailPaths: ["https://v.seloger.com/s/width/1092/visuels/1/h/q/8/1hq8d9lnf30dxf3m86s7ohxb9ftlm6lilg5oun4ka.jpg"]
+            thumnbailPaths: ["https://v.seloger.com/s/width/1092/visuels/1/h/q/8/1hq8d9lnf30dxf3m86s7ohxb9ftlm6lilg5oun4ka.jpg"],
+            ownerPhone: "01 20 30 40 58"
         )
     ]
     

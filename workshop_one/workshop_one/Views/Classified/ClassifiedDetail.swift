@@ -22,7 +22,7 @@ struct ClassifiedDetail: View {
                 contactOwnerView
             }
             .font(.dsBody)
-            .alert("Call owner at: XXX-XX-XX", isPresented: $isAlertPresented) {
+            .alert("Call owner at: \(classified.ownerPhone)", isPresented: $isAlertPresented) {
                 Button("Ok", role: .cancel) {}
             }
             .sheet(isPresented: $isSheetPresented, content: {
