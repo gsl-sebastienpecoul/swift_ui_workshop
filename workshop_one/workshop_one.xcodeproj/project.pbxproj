@@ -15,7 +15,6 @@
 		0276FB2328F07C7200E8663C /* SourceSansPro-Semibold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0276FB1D28F07C7200E8663C /* SourceSansPro-Semibold.ttf */; };
 		0276FB2428F07C7200E8663C /* SourceSansPro-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0276FB1E28F07C7200E8663C /* SourceSansPro-Italic.ttf */; };
 		0276FB2528F07C7200E8663C /* SourceSansPro-SemiboldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0276FB1F28F07C7200E8663C /* SourceSansPro-SemiboldItalic.ttf */; };
-		027BAC7B291C0736008C9EC1 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027BAC7A291C0736008C9EC1 /* SettingsView.swift */; };
 		02B97DD028E73702002463AC /* CustomVStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B97DCF28E73702002463AC /* CustomVStack.swift */; };
 		02E31EE328E48C5200C652F6 /* workshop_oneApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E31EE228E48C5200C652F6 /* workshop_oneApp.swift */; };
 		02E31EE728E48C5400C652F6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 02E31EE628E48C5400C652F6 /* Assets.xcassets */; };
@@ -39,7 +38,6 @@
 		0276FB1D28F07C7200E8663C /* SourceSansPro-Semibold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceSansPro-Semibold.ttf"; sourceTree = "<group>"; };
 		0276FB1E28F07C7200E8663C /* SourceSansPro-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceSansPro-Italic.ttf"; sourceTree = "<group>"; };
 		0276FB1F28F07C7200E8663C /* SourceSansPro-SemiboldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceSansPro-SemiboldItalic.ttf"; sourceTree = "<group>"; };
-		027BAC7A291C0736008C9EC1 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SettingsView.swift; path = workshop_one/views/Settings/SettingsView.swift; sourceTree = SOURCE_ROOT; };
 		02B97DCF28E73702002463AC /* CustomVStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomVStack.swift; sourceTree = "<group>"; };
 		02E31EDF28E48C5200C652F6 /* workshop_one.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = workshop_one.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		02E31EE228E48C5200C652F6 /* workshop_oneApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = workshop_oneApp.swift; sourceTree = "<group>"; };
@@ -100,17 +98,8 @@
 			isa = PBXGroup;
 			children = (
 				027BAC79291C0724008C9EC1 /* Classified */,
-				027BAC78291C071E008C9EC1 /* Settings */,
 			);
 			path = Views;
-			sourceTree = "<group>";
-		};
-		027BAC78291C071E008C9EC1 /* Settings */ = {
-			isa = PBXGroup;
-			children = (
-				027BAC7A291C0736008C9EC1 /* SettingsView.swift */,
-			);
-			path = Settings;
 			sourceTree = "<group>";
 		};
 		027BAC79291C0724008C9EC1 /* Classified */ = {
@@ -250,7 +239,6 @@
 				025B206C28EF25D00012311A /* DesignSystem.swift in Sources */,
 				1ADB4AFC28F80A5400F73E57 /* ClassifiedService.swift in Sources */,
 				02E31EF528E498D800C652F6 /* ClassifiedDetail.swift in Sources */,
-				027BAC7B291C0736008C9EC1 /* SettingsView.swift in Sources */,
 				1ADB4AF628F7E3CA00F73E57 /* MainActionButtonStyle.swift in Sources */,
 				02E31EE328E48C5200C652F6 /* workshop_oneApp.swift in Sources */,
 			);

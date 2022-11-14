@@ -5,8 +5,7 @@ struct ClassifiedDetail: View {
     @Binding private var classified: Classified
     @State private var isAlertPresented = false
     @State private var isSheetPresented = false
-    @StateObject var viewModel = ClassifiedDetailViewModel()
-    
+
     init(classified: Binding<Classified>) {
         _classified = classified
     }
@@ -17,7 +16,6 @@ struct ClassifiedDetail: View {
             Divider()
             VStack(alignment: .leading, spacing: 8.0) {
                 descriptionView
-                Text(viewModel.lastContactText)
                 Spacer()
                 contactOwnerView
             }
@@ -38,7 +36,6 @@ struct ClassifiedDetail: View {
         Group {
             Button {
                 isAlertPresented.toggle()
-                viewModel.updateLastContactText()
             } label: {
                 Label("Contact owner", systemImage: "phone")
             }
