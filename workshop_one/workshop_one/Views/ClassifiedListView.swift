@@ -2,7 +2,7 @@ import SwiftUI
 
 struct ClassifiedListView: View {
     
-    let gridItem = GridItem(.adaptive(minimum: 300), spacing: 8.0, alignment: .leading)
+    let gridItem = GridItem(.adaptive(minimum: 464), spacing: 32.0, alignment: .leading)
     
     @State private var classifieds: [Classified] = []
     let service = ClassifiedService()
@@ -41,6 +41,8 @@ struct ClassifiedListView: View {
         .task {
             classifieds = await service.fetchClassifieds(in: 0.5)
         }
+        .navigationViewStyle(.stack)
+
     }
     
     func addNotAlreadyPresentsClassifieds() async {

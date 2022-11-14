@@ -11,11 +11,24 @@ struct ImageView: View {
         }  placeholder: {
             Color.gray
         }
+        .frame(minWidth: 0, minHeight: 0)
+        .aspectRatio(16/10, contentMode: .fit)
+        .clipped()
+        .clipShape(Rectangle())
     }
 }
 
 struct ImageView_Previews: PreviewProvider {
     static var previews: some View {
-        ImageView(url: "https://v.seloger.com/s/cdn/x/visuels/1/7/8/z/178zh5cxxfa39z3fx29wb5dnuzqoyd96w403ivzzk.jpg")
+        ScrollView {
+            ImageView(url: "https://picsum.photos/200/300")
+                .padding()
+            ImageView(url: "https://picsum.photos/200/300")
+                .padding()
+            ImageView(url: "https://picsum.photos/200/300")
+                .padding()
+            ImageView(url: "https://picsum.photos/200/300")
+                .padding()
+        }
     }
 }

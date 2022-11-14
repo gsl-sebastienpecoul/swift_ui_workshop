@@ -7,7 +7,6 @@ struct ClassifiedListItem: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 0) {
             ImageView(url: classified.thumnbailPaths[0])
-                .frame(height: 200)
                 .overlay(alignment: .topTrailing) {
                     if classified.isNovelty ?? false {
                         ClassifiedLabel(color: .white, text: "New")
