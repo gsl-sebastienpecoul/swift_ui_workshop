@@ -14,9 +14,17 @@ struct SettingsView: View {
             .frame(height: 300)
             .animation(.default, value: isConnected)
             
-            ConnectView(isConnected: $isConnected)
-                .frame(maxHeight: .infinity, alignment: isConnected ? .top : .bottom)
-                .animation(.default, value: isConnected)
+            
+            Group {
+                if isConnected {
+                    Spacer()
+                    ConnectView(isConnected: $isConnected)
+                } else {
+                    ConnectView(isConnected: $isConnected)
+                    Spacer()
+                }
+            }
+            .animation(.default, value: isConnected)
         }
     }
     
@@ -51,7 +59,7 @@ struct ConnectView: View {
 }
 
 struct SettingsItem: Identifiable {
-    var id: String { title }
+    let id =  UUID()
     let title: String
     
     init(title: String) {

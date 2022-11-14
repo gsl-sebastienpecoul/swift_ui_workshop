@@ -5,7 +5,7 @@ struct ClassifiedDetail: View {
     @Binding private var classified: Classified
     @State private var isAlertPresented = false
     @State private var isSheetPresented = false
-    @StateObject var viewModel = ClassifiedDetailViewModel()
+    @ObservedObject var viewModel = ClassifiedDetailViewModel()
     
     init(classified: Binding<Classified>) {
         _classified = classified
