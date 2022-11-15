@@ -17,9 +17,8 @@ struct ClassifiedListView: View {
                 LazyVGrid(columns: [gridItem]) {
                     ForEach($classifieds) { $classified in
                         VStack(spacing: 0) {
-                            NavigationLink {
-                                ClassifiedDetail(classified: $classified)
-                                    .navigationBarTitleDisplayMode(.inline)
+                            Button {
+                                // navigate
                             } label: {
                                 ClassifiedListItem(classified: $classified)
                                     .contentShape(Rectangle())
