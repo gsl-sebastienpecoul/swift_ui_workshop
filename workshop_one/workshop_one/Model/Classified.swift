@@ -21,7 +21,7 @@ extension Classified {
                 """,
                 id: UUID(),
                 isFavorite: true,
-                isNovelty: false,
+                isNovelty: true,
                 mainInformation: "3 rooms • 2 bedrooms • 69 m² • Floor 3/4",
                 place: "Paris 12 ème",
                 price: "159 000€",
