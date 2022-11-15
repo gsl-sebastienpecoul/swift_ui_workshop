@@ -16,6 +16,7 @@ struct FavoriteButton: View {
             }
             .accentColor(Color.red)
         }
+        .accessibilityLabel("Favorite button")
         .accessibilityAddTraits(isFavorite ? [.isButton, .isSelected] : [.isButton])
         .accessibilityValue(isFavorite ? "Is favorite" : "Is not favorite" )
         .dynamicTypeSize(...DynamicTypeSize.accessibility1)
