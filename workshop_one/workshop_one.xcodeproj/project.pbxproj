@@ -26,6 +26,7 @@
 		1ADB4AF828F7E43D00F73E57 /* FavoriteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ADB4AF728F7E43D00F73E57 /* FavoriteButton.swift */; };
 		1ADB4AFA28F7E47600F73E57 /* ImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ADB4AF928F7E47600F73E57 /* ImageView.swift */; };
 		1ADB4AFC28F80A5400F73E57 /* ClassifiedService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ADB4AFB28F80A5400F73E57 /* ClassifiedService.swift */; };
+		1ADE40CB292FDCDD00CCD1F7 /* MyLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ADE40CA292FDCDD00CCD1F7 /* MyLabel.swift */; };
 		1AF7D6A72923AA3600E00853 /* PreferenceKeyDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AF7D6A62923AA3600E00853 /* PreferenceKeyDemo.swift */; };
 /* End PBXBuildFile section */
 
@@ -51,6 +52,7 @@
 		1ADB4AF728F7E43D00F73E57 /* FavoriteButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteButton.swift; sourceTree = "<group>"; };
 		1ADB4AF928F7E47600F73E57 /* ImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageView.swift; sourceTree = "<group>"; };
 		1ADB4AFB28F80A5400F73E57 /* ClassifiedService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassifiedService.swift; sourceTree = "<group>"; };
+		1ADE40CA292FDCDD00CCD1F7 /* MyLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyLabel.swift; sourceTree = "<group>"; };
 		1AF7D6A62923AA3600E00853 /* PreferenceKeyDemo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PreferenceKeyDemo.swift; path = workshop_one/Views/PreferenceKeyDemo.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
@@ -114,6 +116,7 @@
 				1AF7D6A62923AA3600E00853 /* PreferenceKeyDemo.swift */,
 				02E31EF428E498D800C652F6 /* ClassifiedDetail.swift */,
 				02B97DCF28E73702002463AC /* CustomVStack.swift */,
+				1ADE40CA292FDCDD00CCD1F7 /* MyLabel.swift */,
 				1ADB4AF528F7E3CA00F73E57 /* MainActionButtonStyle.swift */,
 			);
 			path = Classified;
@@ -237,6 +240,7 @@
 				02B97DD028E73702002463AC /* CustomVStack.swift in Sources */,
 				02E31EF128E48CA400C652F6 /* ClassifiedListView.swift in Sources */,
 				025B206A28EF239C0012311A /* Classified.swift in Sources */,
+				1ADE40CB292FDCDD00CCD1F7 /* MyLabel.swift in Sources */,
 				1AF7D6A72923AA3600E00853 /* PreferenceKeyDemo.swift in Sources */,
 				1ADB4AF828F7E43D00F73E57 /* FavoriteButton.swift in Sources */,
 				02E31EF328E4932F00C652F6 /* ClassifiedListItem.swift in Sources */,
