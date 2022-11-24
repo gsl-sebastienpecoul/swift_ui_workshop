@@ -3,7 +3,7 @@ import SwiftUI
 struct ClassifiedListItem: View {
     
     @Binding var classified: Classified
-    @State private var maxTagWidth = CGFloat.zero
+    @State private var biggerTagWidth = CGFloat.zero
     
     init(classified: Binding<Classified>) {
         self._classified = classified
@@ -15,11 +15,11 @@ struct ClassifiedListItem: View {
                 .frame(height: 200)
                 .overlay(alignment: .topTrailing) {
                     if classified.isNovelty ?? false {
-                        ClassifiedLabel(color: .white, text: "New", width: maxTagWidth)
+                        ClassifiedLabel(color: .white, text: "New", minWidth: biggerTagWidth)
                     }
                 }
                 .overlay(alignment: .bottomLeading) {
-                    ClassifiedLabel(color: .black, text: "The big 3D Visit", width: maxTagWidth)
+                    ClassifiedLabel(color: .black, text: "The big 3D Visit", minWidth: biggerTagWidth)
                 }
                 .cornerRadius(.medium)
                 .padding(.bottom, -22)
@@ -30,8 +30,8 @@ struct ClassifiedListItem: View {
             footer
         }
         .font(.dsBody)
-        .onPreferenceChange(MaxWidthPreferenceKey.self) {
-            maxTagWidth = $0
+        .onPreferenceChange(BiggerWidthPreferenceKey.self) {
+            biggerTagWidth = $0
         }
     }
     
@@ -51,22 +51,30 @@ struct ClassifiedListItem: View {
 struct ClassifiedLabel: View {
     let color: Color
     let text: String
-    let width: CGFloat
+    let minWidth: CGFloat
     
     var body: some View {
         Text(text)
             .foregroundColor(color != .white ? .white : .black)
             .font(.dsCaption)
             .padding(.extrasmall)
-            .frame(minWidth: width)
-            .maxWidthPreference()
+            .frame(minWidth: minWidth)
+            .overlay(
+                GeometryReader { geo in
+                    Color.clear
+                        .preference(
+                            key: BiggerWidthPreferenceKey.self,
+                            value: geo.size.width
+                        )
+                }
+            )
             .background(color)
             .cornerRadius(.small)
             .padding(.medium)
     }
 }
 
-struct MaxWidthPreferenceKey: PreferenceKey {
+struct BiggerWidthPreferenceKey: PreferenceKey {
     static var defaultValue: CGFloat = 0
     static func reduce(value: inout CGFloat, nextValue: () -> CGFloat) {
         value = max(nextValue(), value)
@@ -79,7 +87,7 @@ extension View {
             GeometryReader { geo in
                 Color.clear
                     .preference(
-                        key: MaxWidthPreferenceKey.self,
+                        key: BiggerWidthPreferenceKey.self,
                         value: geo.size.width
                     )
             }
