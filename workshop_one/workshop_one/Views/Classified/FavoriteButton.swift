@@ -7,7 +7,8 @@ struct FavoriteButton: View {
     var body: some View {
         ZStack {
             Circle()
-                .fill(.white.shadow(.drop(color: .gray, radius: 4.0)))
+                .fill(Color.white)
+                .shadow(color: .gray, radius: 4, x: 0, y: 4)
                 .frame(width: 44, height: 44)
             Button {
                 isFavorite.toggle()

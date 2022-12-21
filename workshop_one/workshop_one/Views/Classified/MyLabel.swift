@@ -18,6 +18,7 @@ struct MyLabel: UIViewRepresentable {
        label.text = text
     }
     
+    @available(iOS 16.0, *)
     func sizeThatFits(
         _ proposal: ProposedViewSize,
         uiView: UILabel,

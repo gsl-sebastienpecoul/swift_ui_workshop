@@ -22,6 +22,7 @@
 		02E31EF128E48CA400C652F6 /* ClassifiedListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E31EF028E48CA400C652F6 /* ClassifiedListView.swift */; };
 		02E31EF328E4932F00C652F6 /* ClassifiedListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E31EF228E4932F00C652F6 /* ClassifiedListItem.swift */; };
 		02E31EF528E498D800C652F6 /* ClassifiedDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E31EF428E498D800C652F6 /* ClassifiedDetail.swift */; };
+		1AB69C3C2951ECFD00B7BFA2 /* Link.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB69C3B2951ECFD00B7BFA2 /* Link.swift */; };
 		1AD418A82927909C00471553 /* OldTag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AD418A72927909C00471553 /* OldTag.swift */; };
 		1ADB4AF628F7E3CA00F73E57 /* MainActionButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ADB4AF528F7E3CA00F73E57 /* MainActionButtonStyle.swift */; };
 		1ADB4AF828F7E43D00F73E57 /* FavoriteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ADB4AF728F7E43D00F73E57 /* FavoriteButton.swift */; };
@@ -53,6 +54,7 @@
 		02E31EF028E48CA400C652F6 /* ClassifiedListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassifiedListView.swift; sourceTree = "<group>"; };
 		02E31EF228E4932F00C652F6 /* ClassifiedListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassifiedListItem.swift; sourceTree = "<group>"; };
 		02E31EF428E498D800C652F6 /* ClassifiedDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassifiedDetail.swift; sourceTree = "<group>"; };
+		1AB69C3B2951ECFD00B7BFA2 /* Link.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Link.swift; sourceTree = "<group>"; };
 		1AD418A72927909C00471553 /* OldTag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OldTag.swift; sourceTree = "<group>"; };
 		1ADB4AF528F7E3CA00F73E57 /* MainActionButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainActionButtonStyle.swift; sourceTree = "<group>"; };
 		1ADB4AF728F7E43D00F73E57 /* FavoriteButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteButton.swift; sourceTree = "<group>"; };
@@ -132,6 +134,7 @@
 				1ADE40D429350F8C00CCD1F7 /* IntrospectTextField.swift */,
 				1ADE40CC292FDD3C00CCD1F7 /* CustomTextField.swift */,
 				1ADE40CA292FDCDD00CCD1F7 /* MyLabel.swift */,
+				1AB69C3B2951ECFD00B7BFA2 /* Link.swift */,
 				1ADB4AF528F7E3CA00F73E57 /* MainActionButtonStyle.swift */,
 			);
 			path = Classified;
@@ -191,6 +194,8 @@
 			dependencies = (
 			);
 			name = workshop_one;
+			packageProductDependencies = (
+			);
 			productName = workshop_one;
 			productReference = 02E31EDF28E48C5200C652F6 /* workshop_one.app */;
 			productType = "com.apple.product-type.application";
@@ -219,6 +224,8 @@
 				Base,
 			);
 			mainGroup = 02E31ED628E48C5200C652F6;
+			packageReferences = (
+			);
 			productRefGroup = 02E31EE028E48C5200C652F6 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -257,6 +264,7 @@
 				02E31EF128E48CA400C652F6 /* ClassifiedListView.swift in Sources */,
 				025B206A28EF239C0012311A /* Classified.swift in Sources */,
 				1ADE40CB292FDCDD00CCD1F7 /* MyLabel.swift in Sources */,
+				1AB69C3C2951ECFD00B7BFA2 /* Link.swift in Sources */,
 				1AF7D6A72923AA3600E00853 /* PreferenceKeyDemo.swift in Sources */,
 				1ADB4AF828F7E43D00F73E57 /* FavoriteButton.swift in Sources */,
 				02E31EF328E4932F00C652F6 /* ClassifiedListItem.swift in Sources */,
@@ -325,7 +333,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -379,7 +387,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -397,6 +405,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"workshop_one/Preview Content\"";
+				DEVELOPMENT_TEAM = X67768M9HY;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "workshop-one-Info.plist";
@@ -426,6 +435,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"workshop_one/Preview Content\"";
+				DEVELOPMENT_TEAM = X67768M9HY;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "workshop-one-Info.plist";

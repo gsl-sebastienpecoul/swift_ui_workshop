@@ -39,6 +39,7 @@ struct OldTag: UIViewRepresentable {
         uiView.text = text
     }
     
+    @available(iOS 16.0, *)
     func sizeThatFits(_ proposal: ProposedViewSize, uiView: OldTagView, context: Context) -> CGSize? {
         guard let proposedWidth = proposal.width,
               proposedWidth < uiView.intrinsicContentSize.width
